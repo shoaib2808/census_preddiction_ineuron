@@ -1,0 +1,15 @@
+README.md
+setup.py
+census_prediction.egg-info/PKG-INFO
+census_prediction.egg-info/SOURCES.txt
+census_prediction.egg-info/dependency_links.txt
+census_prediction.egg-info/requires.txt
+census_prediction.egg-info/top_level.txt
+src/__init__.py
+src/exception.py
+src/logging.py
+src/utils.py
+src/components/Data_ingestion.py
+src/components/Data_transformation.py
+src/components/__init__.py
+src/components/model_traniner.py
