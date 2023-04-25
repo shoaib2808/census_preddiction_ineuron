@@ -1,0 +1,167 @@
+<html>
+<head>
+<style>
+    
+    input[type=text] {
+    border: none;
+    border-bottom: 2px solid red;
+  }
+
+  select {
+    width: 30%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 2px;
+    background-color: #b3acac;
+  }
+
+
+  input[type=button], input[type=submit], input[type=reset] {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  
+
+  header h1 {
+    font-size: 70px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
+    text-shadow: 1px 1px 0px #957dad,
+               1px 2px 0px #957dad,
+               1px 3px 0px #957dad,
+               1px 4px 0px #957dad,
+               1px 5px 0px #957dad,
+               1px 6px 0px #957dad,
+               1px 10px 5px rgba(16, 16, 16, 0.5),
+               1px 15px 10px rgba(16, 16, 16, 0.4),
+               1px 20px 30px rgba(16, 16, 16, 0.3),
+               1px 25px 50px rgba(16, 16, 16, 0.2);
+
+  }
+
+  header h1 {
+    font-size: 70px;
+    font-weight: 500;
+    color: #553c9a;
+    border-right: 4px solid #000; /*This will be the blinking cursor*/
+  }
+
+  body{
+ background-image: url(Templates/css.PNG);
+ background-color: #6356d6;
+}
+
+  
+  
+</style>
+<body>
+  
+      <header>
+          <h1>Census prediction model</h1>
+      </header>
+    
+   
+
+      
+      
+<form action="{{ url_for("Home_screen")}}" method="post">
+
+    
+    <label for="Age">Age:</label>
+    <input type="text" id="Age" name="Age" placeholder="Age"> <br><br>
+
+    <label for="workclass">workclass:</label>
+    <select name= workclass method="GET" action="/">
+        <option value= " State-gov" SELECTED>State-gov</option>"
+        <option value= " Self-emp-not-inc" SELECTED>Self-emp-not-inc</option>"
+        <option value= " Private" SELECTED>Private</option>"
+        <option value= " Federal-gov" SELECTED>Federal-gov</option>"
+        <option value= " Local-gov" SELECTED>Local-gov</option>"
+        <option value= " Self-emp-inc" SELECTED>Self-emp-inc</option>"
+        <option value= " Without-pay" SELECTED>Without-pay</option>"
+        <option value= " Never-worked" SELECTED>Never-worked</option>"
+        <option value= " Other" SELECTED>Other</option>"
+        <option value= "workclass" SELECTED> select</option>"
+    </select>
+<br><br>
+    <label for="fnlwgt">fnlwgt:</label>
+    <input type="text" id="fnlwgt" name="fnlwgt" placeholder="fnlwgt"><br><br>
+    
+  
+
+<label for="Education Num">Education Num:</label>
+<input type="text" id="Education Num" name="Education Num" placeholder="Education Num"><br><br>
+    
+
+    <label for="Marital status">Marital status:</label>
+    <select name= "Marital status" method="GET" action="/">
+        <option value= " Never-married" SELECTED> Never-married</option>"
+        <option value= " Married-civ-spouse" SELECTED> Married-civ-spouse</option>"
+        <option value= " Divorced" SELECTED> Divorced</option>"
+        <option value= " Married-spouse-absent" SELECTED> Married-spouse-absent</option>"
+        <option value= " Separated" SELECTED> Separated</option>"
+        <option value= " Married-AF-spouse" SELECTED> Married-AF-spouse</option>"
+        <option value= " Widowed" SELECTED> Widowed</option>"
+        <option value= "workclass" SELECTED> select</option>"
+    </select>
+    <br><br>
+
+    <label for="Occupation">Occupation:</label>
+<input type="text" id="Occupation" name="Occupation" placeholder="Occupation"><br><br>
+    
+
+<label for="relationship">relationship:</label>
+    <select name= relationship method="GET" action="/">
+        <option value= " Not-in-family" SELECTED> Not-in-family</option>"
+        <option value= " Husband" SELECTED> Husband</option>"
+        <option value= " Wife" SELECTED> Wife</option>"
+        <option value= " Own-child" SELECTED> Own-child</option>"
+        <option value= " Unmarried" SELECTED> Unmarried</option>"
+        <option value= " Other-relative" SELECTED> Other-relative</option>"
+        <option value= "workclass" SELECTED> select</option>"
+    </select><br><br>
+
+    <label for="Race">Race:</label>
+    <select name= Race method="GET" action="/">
+        <option value= " White" SELECTED> White</option>"
+        <option value= " Black" SELECTED> Black</option>"
+        <option value= " Asian-Pac-Islander" SELECTED> Asian-Pac-Islander</option>"
+        <option value= " Amer-Indian-Eskimo" SELECTED> Amer-Indian-Eskimo</option>"
+        <option value= " Other" SELECTED> Other</option>"
+        <option value= "workclass" SELECTED> select</option>"
+    </select><br><br>
+
+    <label for="Sex">Sex:</label>
+    <select name= Sex method="GET" action="/">
+        <option value= " Male" SELECTED> Male</option>"
+        <option value= " Female" SELECTED> Female</option>"
+    </select>
+     <br><br>
+
+     <label for="capital-loss">capital-loss:</label>
+<input type="text" id="capital-loss" name="capital-loss" placeholder="capital-loss"><br><br>
+
+<label for="capital-gain">capital-gain:</label>
+<input type="text" id="capital-gain" name="capital-gain" placeholder="capital-gain"><br><br>
+
+<label for="hours-per-week">hours-per-week:</label>
+<input type="text" id="hours-per-week" name="hours-per-week" placeholder="hours-per-week"><br><br>
+
+
+    <button type="submit">predict</button>
+    
+
+</form>
+
+</body>
+  </html>

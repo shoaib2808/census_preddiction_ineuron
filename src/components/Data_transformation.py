@@ -73,7 +73,7 @@ class Data_transformation_class:
             ('cat_pipeline',cat_pipeline,pipeline_col),
         ])
         
-        save_obj(self.Transformed_data_path,processor)
+        
         logging.info("Data Transformation pipeline object saved")
         return processor
     
@@ -105,7 +105,7 @@ class Data_transformation_class:
          logging.info(pd.DataFrame(x_test).head(3))
         
         #  self.drop_columns(x_train,categorical_col)
-
+         save_obj(self.Transformed_data_path,processor_obj)
          logging.info("================Data Transformation succesful==================")
          return x_train,x_test,y_train,y_test
 
